@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+       /* 填写样式 */
+    </style>
+</head>
+
+<body>
+  <!-- <button onclick="createLi(['string'])">click</button> -->
+ <ul></ul> 
+    <script type="text/javascript">
+       function createLi(array){
+            // 补全代码
+            let ul = document.querySelector('ul');
+            console.log(ul);
+            let ul1 = document.getElementsByTagName('ul');
+            console.log(ul1);
+            for(const a of array){
+                let child = document.createElement('li');
+                let textNode = document.createTextNode(a);
+                child.appendChild(textNode);
+                ul.appendChild(child);
+            }
+        }       
+        createLi(['a','b','c']);
+    </script>
+</body>
+
+</html>

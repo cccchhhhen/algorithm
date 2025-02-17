@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* 填写样式 */
+    </style>
+</head>
+
+<body>
+      <script type="text/javascript">
+        // 填写JavaScript
+        // function _reverse(number) {
+        //     let string = String(number);
+
+        //     let string1 = '';
+        //     if(string[0] === '-'){
+        //         string1 = '-';
+        //     }
+        //     for(let i=string.length-1;i>=0;i--){
+        //         if(i === 0 && string[i] === '-'){
+        //             continue;
+        //         }
+        //         string1 += string[i];
+        //     }
+        //     string1 = Number(string1);
+        //     return string1;
+        // }
+        function _reverse(number) {
+            // 补全代码
+            if(number >= 0){
+                return Math.abs(number).toString().split("").reverse().join("") * 1
+            }else{
+                return Math.abs(number).toString().split("").reverse().join("") * (-1)
+            }
+        }
+
+        let number = +prompt('input a number:');
+        let result = _reverse(number);
+        console.log(result)
+    </script>
+</body>
+
+</html>

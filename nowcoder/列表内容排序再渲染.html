@@ -1,0 +1,52 @@
+<!-- from nowocder -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+  <ul id="myList">
+    <li id="item23">项目 23</li>
+    <li id="item9">项目 9</li>
+    <li id="item14">项目 14</li>
+    <li id="item15">项目 15</li>
+  </ul>
+
+  <script>
+    function sortAndReturnTextContent() {
+        const items = document.getElementById('myList').children;
+        console.log(items[0].id);
+        console.log(parseInt(items[0].id));
+        let arr = [...items].sort((a,b)=>{
+          if(a.id.length == b.id.length)
+            return a.id > b.id ? 1 : -1;
+          else if(a.id.length<b.id.length)
+            return -1;
+          else return 1;
+        })
+      // 在此补全代码
+        // 冒泡排序   
+        // for(let i=0;i<arr.length;i++){
+        //     for(let j=0;j<arr.length-i-1;j++){
+        //         if(arr[j].id>arr[j+1].id){
+        //             let temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+        document.getElementById('myList').innerHTML = arr.map(a=>a.outerHTML).join('')
+    }
+    sortAndReturnTextContent()
+  </script>
+
+
+
+</body>
+
+</html>
